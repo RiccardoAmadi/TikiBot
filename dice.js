@@ -93,7 +93,6 @@ class Dice {
 
       //ogni element è un addendo di lancio di dadi es. d20 o +4d6
       results.forEach(element => {
-        console.log('element: ' + element);
         this.parseSingleRollInput(element);
       });
 
@@ -104,7 +103,6 @@ class Dice {
       //ogni element è un addendo es. +2 o -15
       if(constResults !== null) {
         constResults.forEach(element => {
-          console.log('element: ' + element);
           this.sumSingleConstant(element);
         });
       }
@@ -132,13 +130,8 @@ class Dice {
         if(diceModifier === '-') {
           this.result -= lastRoll;
         }
-
-        console.log("roll:");
-        console.log(lastRoll);
       }
 
-      console.log('len ');
-      console.log(this.rolledDice.length);
       this.rolledDice[this.rolledDice.length] = [diceSize, rolledDice];
     }
   
