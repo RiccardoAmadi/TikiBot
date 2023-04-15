@@ -23,6 +23,20 @@ class Dice {
     removeWhitespaces(string) {
       return string.replace(/\s/g, "");
     }
+
+    execute () {
+      if(this.validate()) {
+        this.parseDiceRollInput();
+        return this.printRollMessage();
+      }
+      else if (this.validate2()) {
+        this.parseDiceRollInput2();
+        return this.printRollMessage2();
+      }
+      else{
+        return '"' + this.command + '"? Non ho capito! Usa il formato: 3d20+5';
+      }
+    }
     
     printRollMessage() {
       var message = '```ini\n';

@@ -13,17 +13,7 @@ module.exports = {
 		var rollString = interaction.options.getString('dadi');
 		var dice = new Dice(rollString);
 		
-		if(dice.validate()) {
-		  dice.parseDiceRollInput();
-		  message = dice.printRollMessage();
-		}
-		else if (dice.validate2()) {
-			dice.parseDiceRollInput2();
-			message = dice.printRollMessage2();
-		}
-		else{
-		  message = '"' + rollString + '"? Non ho capito! Usa il formato: 3d20+5';
-		}
+		message = dice.execute();
 		
 		// Send a message into the channel where command was triggered from
 		await interaction.reply(message);

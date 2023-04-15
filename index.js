@@ -8,6 +8,8 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
+global.macros = new Map(); //es. {id: "2468", userMacroMap: {nome: "percezione", dadi: "d20+5"}}
+
 for (const file of eventFiles) {
 	const filePath = path.join(eventsPath, file);
 	const event = require(filePath);

@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.8.0",
-    "git": "^0.1.5"
+    "git": "^0.1.5",
+    "sequelize": "^6.31.0",
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "eslint": "^8.36.0"
