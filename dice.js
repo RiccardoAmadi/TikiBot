@@ -55,21 +55,8 @@ class Dice {
       
       message += '```';
       message += '```ml';
-      message += '\n';
-      message += '\'d' + element[0] + '\'';
-      message += ' ';
-      message += this.printRolled2(element[1]);
 
-      if(this.rolledDice.length > 1) {
-        element = this.rolledDice[1];
-  
-        message += '\n';
-        message += '"d' + element[0] + '"';
-        message += ' ';
-        message += this.printRolled2(element[1]);
-      }
-
-      for (let index = 2; index < this.rolledDice.length; index++) {
+      for (let index = 0; index < this.rolledDice.length; index++) {
         
         element = this.rolledDice[index];
 

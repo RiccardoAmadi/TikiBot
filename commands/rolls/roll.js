@@ -18,11 +18,8 @@ module.exports = {
 		  message = dice.printRollMessage();
 		}
 		else if (dice.validate2()) {
-			console.log('complex roll');
 			dice.parseDiceRollInput2();
-			console.log('complex roll');
 			message = dice.printRollMessage2();
-			console.log('complex roll');
 		}
 		else{
 		  message = '"' + rollString + '"? Non ho capito! Usa il formato: 3d20+5';
